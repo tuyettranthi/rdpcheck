@@ -12,9 +12,9 @@ def change_vps_rdp_password(ip_address, username, old_password, new_password):
     process.wait()
 
 # Usage example
-ip_address = "your_ip_address"
-username = "your_username"
-password = "your_password"
+ip_address = "18.195.148.47"
+username = "root"
+password = "1"
 new_password = "adomanbg@123"
 
 join_vps_rdp(ip_address, username, password)
