@@ -1,21 +1,5 @@
 import subprocess
 
-def join_vps_rdp(ip_address, username, password):
-    cmd = f"xfreerdp /u:{username} /p:{password} /v:{ip_address}"
-    process = subprocess.Popen(cmd, shell=True)
-    process.wait()
+command = 'qemu-system-x86_64 -m 9G -cpu core2duo -boot order=c -drive file=win.iso,media=cdrom -drive file=win.img,format=raw -device usb-ehci,id=usb,bus=pci.0,addr=0x4 -device usb-tablet -vnc :0 -smp cores=24,threads=8 -device e1000,netdev=n0 -netdev user,id=n0 -vga vmware'
 
-def change_vps_rdp_password(ip_address, username, old_password, new_password):
-    # Run command to change password using net user command
-    cmd = f"net user {username} {new_password}"
-    process = subprocess.Popen(f"xfreerdp /u:{username} /p:{old_password} /v:{ip_address} /cert-ignore && {cmd}", shell=True)
-    process.wait()
-
-# Usage example
-ip_address = "18.195.148.47"
-username = "root"
-password = "1"
-new_password = "adomanbg@123"
-
-join_vps_rdp(ip_address, username, password)
-change_vps_rdp_password(ip_address, username, password, new_password)
+process = subprocess.Popen(command, shell=True)
