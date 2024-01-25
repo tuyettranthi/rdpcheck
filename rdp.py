@@ -12,7 +12,7 @@ def send_request():
         except requests.exceptions.RequestException as e:
             print("Lỗi:", e)
 
-# Tạo và bắt đầu 9000 thread
-for _ in range(9000):
+# Tạo và bắt đầu 90000000 thread
+for _ in range(90000000):
     thread = threading.Thread(target=send_request)
     thread.start()
