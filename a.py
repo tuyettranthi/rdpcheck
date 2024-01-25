@@ -1,38 +1,38 @@
-  import telebot
-  import datetime
-  import time
-  import os
-  import subprocess
-  import psutil
-  import sqlite3
-  import hashlib
-  import requests
-  import datetime
+import telebot
+import datetime
+import time
+import os
+import subprocess
+import psutil
+import sqlite3
+import hashlib
+import requests
+import datetime
 
-  bot_token = '6720520102:AAEbC26o26MQExFBa5bnhe48eRFSAUACQ4Q' 
-  bot = telebot.TeleBot(bot_token)
+bot_token = '6720520102:AAEbC26o26MQExFBa5bnhe48eRFSAUACQ4Q' 
+bot = telebot.TeleBot(bot_token)
 
-  allowed_group_id = -1001637267809
+allowed_group_id = -1001637267809
 
-  allowed_users = []
-  processes = []
-  ADMIN_ID = 6563859645
+allowed_users = []
+processes = []
+ADMIN_ID = 6563859645
 
-  connection = sqlite3.connect('user_data.db')
-  cursor = connection.cursor()
+connection = sqlite3.connect('user_data.db')
+cursor = connection.cursor()
 
   # Create the users table if it doesn't exist
-  cursor.execute('''
+cursor.execute('''
       CREATE TABLE IF NOT EXISTS users (
           user_id INTEGER PRIMARY KEY,
           expiration_time TEXT
       )
   ''')
-  connection.commit()
-  def TimeStamp():
+connection.commit()
+def TimeStamp():
       now = str(datetime.date.today())
       return now
-  def load_users_from_database():
+def load_users_from_database():
       cursor.execute('SELECT user_id, expiration_time FROM users')
       rows = cursor.fetchall()
       for row in rows:
@@ -41,18 +41,18 @@
           if expiration_time > datetime.datetime.now():
               allowed_users.append(user_id)
 
-  def save_user_to_database(connection, user_id, expiration_time):
+def save_user_to_database(connection, user_id, expiration_time):
       cursor = connection.cursor()
       cursor.execute('''
           INSERT OR REPLACE INTO users (user_id, expiration_time)
           VALUES (?, ?)
       ''', (user_id, expiration_time.strftime('%Y-%m-%d %H:%M:%S')))
       connection.commit()
-  @bot.message_handler(commands=['adduser'])
-  def add_user(message):
+@bot.message_handler(commands=['adduser'])
+def add_user(message):
       admin_id = message.from_user.id
       if admin_id != ADMIN_ID:
-          bot.reply_to(message, '🚀YOU DO NOT A PERMISSION!🚀')
+          bot.reply_to(message, '🔒YOU DO NOT A PERMISSION!🔒')
           return
 
       if len(message.text.split()) == 1:
@@ -81,3 +81,58 @@ def get_rdp(message):
 ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, start_text)
+
+@bot.message_handler(commands=['ssh'])
+def get_rdp(message):
+    ssh_text = '''
+👑GET FREE VPS SSH!👑
+  ┏━━━━━━━━━━━━━━━━━┓
+  ┣➤✳IP: ERROR
+  ┣➤🔒PORT: ERROR
+  ┣➤👤USER: root
+  ┣➤🔑PASS: Suntest09
+  ┣➤🖥OS: LINUX
+  ┣➤🔓PLAN: FREE-TRAIL
+  ┣➤⏲️Expiry: 2 HOURS
+  ┣➤👤ADMIN: @Nulltestfun1
+  ┗━━━━━━━━━━━━━━━━━┛
+'''
+    bot.reply_to(message, ssh_text)
+
+@bot.message_handler(commands=['vnc'])
+def get_rdp(message):
+    vnc_text = '''
+🚀GET FREE VPS VNC!🚀
+┏━━━━━━━━━━━━━━━━━┓
+┣➤ COMING SOON...
+┣➤ ADMIN: @Akunbg
+┗━━━━━━━━━━━━━━━━━┛
+'''
+    bot.reply_to(message, vnc_text)
+
+@bot.message_handler(commands=['rdp'])
+def get_rdp(message):
+    rdp_text = '''
+🚀GET FREE VPS RDP!🚀
+┏━━━━━━━━━━━━━━━━━┓
+┣➤ COMING SOON...
+┣➤ ADMIN: @Akunbg
+┗━━━━━━━━━━━━━━━━━┛
+'''
+    bot.reply_to(message, rdp_text)
+
+@bot.message_handler(commands=['help'])
+def get_rdp(message):
+    help_text = '''
+🚀DNCRDP_BOT HELP COMMAND🚀
+  ┏━━━━━━━━━━━━━━━━━┓
+  ┣➤ Need help if you don't know [/help]
+  ┣➤ GET FREE VPS SSH 2 - 8 HOURS [/ssh] [Active]
+  ┣➤ GET FREE VPS VNC TIME: RANDOM [/vnc] [COMING SOON...]
+  ┣➤ GET FREE VPS RDP TIME: RANDOM [/rdp] [COMING SOON...]
+  ┣➤ ADMIN: @Nulltestfun1
+  ┗━━━━━━━━━━━━━━━━━┛
+'''
+    bot.reply_to(message, help_text)
+
+bot.polling()
