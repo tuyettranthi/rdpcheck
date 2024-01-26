@@ -78,7 +78,7 @@ def get_rdp(message):
 ┣➤ t.me/altsforme1
 ┣➤ https://t.me/ALTSFORME1
 ┣➤ JOIN ALL? SEND [/help]
-┣➤ ADMIN: @Akunbg
+┣➤ ADMIN: @Nulltestfun1
 ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, start_text)
@@ -88,13 +88,13 @@ def get_rdp(message):
     ssh_text = '''
 👑GET FREE VPS SSH!👑
   ┏━━━━━━━━━━━━━━━━━┓
-  ┣➤✳IP: ERROR
-  ┣➤🔒PORT: ERROR
-  ┣➤👤USER: root
-  ┣➤🔑PASS: Suntest09
-  ┣➤🖥OS: LINUX
+  ┣➤✳IP: 138.197.38.152
+  ┣➤🔒PORT: 22
+  ┣➤👤USER: master_kdvgzqcjjm
+  ┣➤🔑PASS: ZVmeepJFf67p
+  ┣➤🖥OS: [ERROR]
   ┣➤🔓PLAN: FREE-TRAIL
-  ┣➤⏲️Expiry: 2 HOURS
+  ┣➤⏲️Expiry: 2 DAY
   ┣➤👤ADMIN: @Nulltestfun1
   ┗━━━━━━━━━━━━━━━━━┛
 '''
@@ -106,7 +106,7 @@ def get_rdp(message):
 🚀GET FREE VPS VNC!🚀
 ┏━━━━━━━━━━━━━━━━━┓
 ┣➤ COMING SOON...
-┣➤ ADMIN: @Akunbg
+┣➤ ADMIN: @Nulltestfun1
 ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, vnc_text)
@@ -117,7 +117,7 @@ def get_rdp(message):
 🚀GET FREE VPS RDP!🚀
 ┏━━━━━━━━━━━━━━━━━┓
 ┣➤ COMING SOON...
-┣➤ ADMIN: @Akunbg
+┣➤ ADMIN: @Nulltestfun1
 ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, rdp_text)
