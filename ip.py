@@ -11,7 +11,7 @@ ports = [3389, 5900, 80, 443, 8080, 8000]
 ip_count = 50000
 creation_speed = 0.0
 
-with open("proxy.txt", "w") as file:
+with open("proxy/proxy.txt", "w") as file:
     for _ in range(ip_count):
         ip = generate_ip()
         for port in ports:
