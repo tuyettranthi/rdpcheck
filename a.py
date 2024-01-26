@@ -104,10 +104,15 @@ def get_rdp(message):
 def get_rdp(message):
     vnc_text = '''
 🚀GET FREE VPS VNC!🚀
-┏━━━━━━━━━━━━━━━━━┓
-┣➤ COMING SOON...
-┣➤ ADMIN: @Nulltestfun1
-┗━━━━━━━━━━━━━━━━━┛
+👑GET FREE VPS VNC!👑
+  ┏━━━━━━━━━━━━━━━━━┓
+  ┣➤✳IP: 0.tcp.ap.ngrok.io
+  ┣➤🔒PORT: 12784
+  ┣➤🖥OS: Windows 2012
+  ┣➤🔓PLAN: FREE-TRAIL
+  ┣➤⏲️Expiry: UNKNOWN
+  ┣➤👤ADMIN: @Nulltestfun1
+  ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, vnc_text)
 
