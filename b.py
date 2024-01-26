@@ -68,7 +68,7 @@ def add_user(message):
 
       bot.reply_to(message, f'🚀USER ID {user_id} SUCCESS ADD TO PREMIUM BY ADMIN!🚀')
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['run'])
 def get_rdp(message):
     start_text = '''
 ━━➤ 🚀 Welcome to @dncrdp_bot!🚀
