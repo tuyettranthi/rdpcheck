@@ -77,6 +77,7 @@ def get_rdp(message):
 ┣➤ t.me/suppertkl1
 ┣➤ t.me/altsforme1
 ┣➤ https://t.me/ALTSFORME1
+┣➤ JOIN ALL? SEND [/help]
 ┣➤ ADMIN: @Akunbg
 ┗━━━━━━━━━━━━━━━━━┛
 '''
@@ -125,9 +126,19 @@ def get_rdp(message):
   ┣➤ GET FREE VPS SSH 2 - 8 HOURS [/ssh] [Active]
   ┣➤ GET FREE VPS VNC TIME: RANDOM [/vnc] [COMING SOON...]
   ┣➤ GET FREE VPS RDP TIME: RANDOM [/rdp] [COMING SOON...]
+  ┣➤ GET FREE PROXY [/proxy]
   ┣➤ ADMIN: @Nulltestfun1
   ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, help_text)
+
+@bot.message_handler(commands=['proxy'])
+def get_proxy_file(message):
+    proxy_file_path = "./proxy/proxy.txt"
+    if os.path.exists(proxy_file_path):
+        with open(proxy_file_path, "rb") as file:
+            bot.send_document(message.chat.id, file)
+    else:
+        bot.reply_to(message, "🔒Proxy list file not found!🔒")
 
 bot.polling()
