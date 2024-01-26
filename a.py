@@ -107,8 +107,8 @@ def get_rdp(message):
 👑GET FREE VPS VNC!👑
   ┏━━━━━━━━━━━━━━━━━┓
   ┣➤✳IP: 0.tcp.ap.ngrok.io
-  ┣➤🔒PORT: 12784
-  ┣➤🖥OS: Windows 2012
+  ┣➤🔒PORT: 19696
+  ┣➤🖥OS: Windows 10
   ┣➤🔓PLAN: FREE-TRAIL
   ┣➤⏲️Expiry: UNKNOWN
   ┣➤👤ADMIN: @Nulltestfun1
