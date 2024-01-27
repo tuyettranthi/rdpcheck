@@ -103,7 +103,6 @@ def get_rdp(message):
 @bot.message_handler(commands=['vnc'])
 def get_rdp(message):
     vnc_text = '''
-🚀GET FREE VPS VNC!🚀
 👑GET FREE VPS VNC!👑
   ┏━━━━━━━━━━━━━━━━━┓
   ┣➤✳IP: 0.tcp.ap.ngrok.io
@@ -133,8 +132,8 @@ def get_rdp(message):
 🚀DNCRDP_BOT HELP COMMAND🚀
   ┏━━━━━━━━━━━━━━━━━┓
   ┣➤ Need help if you don't know [/help]
-  ┣➤ GET FREE VPS SSH 2 - 8 HOURS [/ssh] [Active]
-  ┣➤ GET FREE VPS VNC TIME: RANDOM [/vnc] [COMING SOON...]
+  ┣➤ GET FREE VPS SSH 2 - 8 HOURS [/ssh] [STOCK OUT!]
+  ┣➤ GET FREE VPS VNC TIME: RANDOM [/vnc] [STOCK OUT!]
   ┣➤ GET FREE VPS RDP TIME: RANDOM [/rdp] [COMING SOON...]
   ┣➤ GET FREE PROXY [/proxy]
   ┣➤ ADMIN: @Nulltestfun1
