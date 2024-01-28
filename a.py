@@ -118,11 +118,17 @@ def get_rdp(message):
 @bot.message_handler(commands=['rdp'])
 def get_rdp(message):
     rdp_text = '''
-🚀GET FREE VPS RDP!🚀
-┏━━━━━━━━━━━━━━━━━┓
-┣➤ COMING SOON...
-┣➤ ADMIN: @Nulltestfun1
-┗━━━━━━━━━━━━━━━━━┛
+👑GET FREE VPS RDP!👑
+  ┏━━━━━━━━━━━━━━━━━┓
+  ┣➤✳IP: 20.237.223.232
+  ┣➤🔒PORT: 3389 / 22
+  ┣➤👤USER: john
+  ┣➤🔑PASS: 123456Hi@@//
+  ┣➤🖥OS: win 11
+  ┣➤🔓PLAN: FREE-TRAIL
+  ┣➤⏲️Expiry: UNKNOWN!
+  ┣➤👤ADMIN: @Nulltestfun1
+  ┗━━━━━━━━━━━━━━━━━┛
 '''
     bot.reply_to(message, rdp_text)
 
